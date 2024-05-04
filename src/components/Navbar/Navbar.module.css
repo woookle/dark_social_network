@@ -1,0 +1,25 @@
+.nav {
+    grid-area: n;
+    background-color: rgba(30, 30, 30, 0.541);
+    padding: 30px 0;
+}
+
+.item {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.item:hover {
+    transform: scale(1.05);
+}
+.item a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.item .activeLink {
+    color: black;
+    background-color: white;
+    padding: 10px 40px;
+}

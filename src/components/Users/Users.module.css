@@ -1,0 +1,93 @@
+.left_block {
+  display: flex;
+  gap: 40px
+}
+
+.userPhoto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user_block {
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.621);
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_full_name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user_status {
+  font-size: 14px;
+  width: 450px;
+  word-break: break-all;
+}
+
+.avatar_and_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.fullname_and_status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.flw_btn {
+  background-color: #000;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flw_btn:hover {
+  transform: scale(0.95);
+}
+
+.flw_btn[value='active'] {
+  color: brown;
+  background-color: #00000080;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pagesCountBlock .selectedPage {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  padding: 5px;
+}
+
+.pagesCountBlock {
+  background-color: rgba(255, 255, 255, 0.115);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagesCountBlock span {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pagesCountBlock span:hover {
+  transform: scale(0.9);
+}

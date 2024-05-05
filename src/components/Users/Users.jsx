@@ -1,6 +1,9 @@
 import React from "react";
 import userPhoto from "../../assets/images/userPNG.jpg";
 import style from "./Users.module.css";
+import { NavLink } from "react-router-dom";
+import { usersAPI } from "../api/api";
+import axios from "axios";
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -30,30 +33,43 @@ let Users = (props) => {
           );
         })}
       </div>
-      {props.users.map((u) => <div key={u.id} className={style.user_block}>
+      {props.users.map((u) => (
+        <div key={u.id} className={style.user_block}>
           <div className={style.left_block}>
             <span className={style.avatar_and_btn}>
               <div>
-                <img
-                  className={style.userPhoto}
-                  src={u.photos.small != null ? u.photos.small : userPhoto}
-                />
+                <NavLink to={"/profile/" + u.id}>
+                  <img
+                    className={style.userPhoto}
+                    src={u.photos.small != null ? u.photos.small : userPhoto}
+                  />
+                </NavLink>
               </div>
               <div>
                 {u.followed ? (
                   <button
                     className={style.flw_btn}
                     onClick={() => {
-                      props.unfollow(u.id);
+                      usersAPI.unfollow(u.id)
+                        .then((response) => {
+                          if (response.data.resultCode === 0) {
+                            props.unfollow(u.id);
+                          }
+                        });
                     }}
-                    value='active'
+                    value="active"
                   >
                     Unfollow
                   </button>
                 ) : (
                   <button
                     onClick={() => {
-                      props.follow(u.id);
+                      usersAPI.follow(u.id)
+                        .then((response) => {
+                          if (response.data.resultCode === 0) {
+                            props.follow(u.id);
+                          }
+                        });
                     }}
                     className={style.flw_btn}
                   >
@@ -72,7 +88,7 @@ let Users = (props) => {
             <div>{"u.location.city"}</div>
           </span>
         </div>
-      )}
+      ))}
     </div>
   );
 };

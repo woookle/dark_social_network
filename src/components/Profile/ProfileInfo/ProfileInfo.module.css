@@ -5,4 +5,19 @@
 }
 .descriptionBlock {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.fullName {
+    font-weight: 700;
+}
+
+.aboutMe {
+    opacity: 0.5;
 }

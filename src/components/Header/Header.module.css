@@ -2,14 +2,32 @@
 .header {
     grid-area: h;
     display: flex;
+    justify-content: space-between;
     background-color: rgb(0, 0, 0);
     align-items: center;
     font-size: 20px;
     color: white;
-    padding-left: 30px;
-    font-family: "Jacquard 24", system-ui;
+    padding: 0 30px;
     border: 2px solid rgb(18, 18, 18);
   }
 .header img {
   width: 100px;
+}
+.loginBlock {
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: default;
+}
+.loginBlock a {
+  color: #fff;
+  text-decoration: none;
+}
+.loginBlock:hover {
+  transform: scale(1.1);
+}
+.siteName {
+  display: flex;
+  align-items: center;
+  font-family: "Jacquard 24", system-ui;
 }

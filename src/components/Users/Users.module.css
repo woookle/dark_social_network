@@ -60,6 +60,10 @@
   background-color: #00000080;
 }
 
+.flw_btn:disabled {
+  opacity: 0.3;
+}
+
 .location {
   display: flex;
   flex-direction: column;

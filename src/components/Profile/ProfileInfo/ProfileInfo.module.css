@@ -21,3 +21,9 @@
 .aboutMe {
     opacity: 0.5;
 }
+.change_status {
+    background-color: rgba(255, 255, 255, 0.099);
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

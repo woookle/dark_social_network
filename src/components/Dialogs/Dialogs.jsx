@@ -3,7 +3,6 @@ import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 import style from './Dialogs.module.css';
 
-
 const Dialogs = (props) => {
 
     let message = React.createRef()
@@ -21,7 +20,6 @@ const Dialogs = (props) => {
         let text = message.current.value
         props.updateNewMessageBody(text)
     }
-
     return (
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>

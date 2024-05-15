@@ -2,7 +2,6 @@ import React from "react";
 import userPhoto from "../../assets/images/userPNG.jpg";
 import style from "./Users.module.css";
 import { NavLink } from "react-router-dom";
-import { usersAPI } from "../api/api";
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -48,16 +47,11 @@ let Users = (props) => {
                 {u.followed ? (
                   <button
                     className={style.flw_btn}
-                    disabled={props.followingInProgress.some(id => id === u.id)}
+                    disabled={props.followingInProgress.some(
+                      (id) => id === u.id
+                    )}
                     onClick={() => {
-                      props.toggleFollowInProgress(true, u.id)
-                      usersAPI.unfollow(u.id)
-                        .then((response) => {
-                          if (response.data.resultCode === 0) {
-                            props.unfollow(u.id);
-                          }
-                          props.toggleFollowInProgress(false, u.id)
-                        });
+                      props.unfollow(u.id);
                     }}
                     value="active"
                   >
@@ -66,16 +60,11 @@ let Users = (props) => {
                 ) : (
                   <button
                     className={style.flw_btn}
-                    disabled={props.followingInProgress.some(id => id === u.id)}
+                    disabled={props.followingInProgress.some(
+                      (id) => id === u.id
+                    )}
                     onClick={() => {
-                      props.toggleFollowInProgress(true, u.id)
-                      usersAPI.follow(u.id)
-                        .then((response) => {
-                          if (response.data.resultCode === 0) {
-                            props.follow(u.id);
-                          }
-                          props.toggleFollowInProgress(false, u.id)
-                        });
+                      props.follow(u.id);
                     }}
                   >
                     Follow

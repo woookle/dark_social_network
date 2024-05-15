@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Note
+## Note
 
-### `This site was written on the basis of the course "The Way of the Samurai"`
-Link to the course
-https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&pp=iAQB
+### This site was written on the basis of the course "The Way of the Samurai"
+Link to the course [*click*](https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&pp=iAQB)
+
 
 ## Available Scripts
 

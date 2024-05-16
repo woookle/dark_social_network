@@ -9,8 +9,9 @@ const Header = (props) => {
         <img src="https://logodix.com/logo/1600113.png" />
         <p>dark social network.</p>
       </div>
-      <div className={style.loginBlock}>
-        {props.isAuth ? props.login : <NavLink to={"/login"}>Login</NavLink>}
+      <div>
+        {props.isAuth ? 
+        <div className={style.loginBlock}><NavLink className={style.loginText} to={'/profile'}>{props.login}</NavLink><button onClick={props.logout}>Log out</button></div> : <NavLink to={"/login"} className={style.login_btn}>Login</NavLink>}
       </div>
     </header>
   );

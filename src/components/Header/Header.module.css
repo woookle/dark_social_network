@@ -14,20 +14,41 @@
   width: 100px;
 }
 .loginBlock {
-  transition: all 0.3s ease;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 30px;
   font-size: 14px;
   cursor: default;
 }
-.loginBlock a {
+.loginBlock button {
+  color: black;
+  font-weight: bold;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.loginBlock button:hover {
+  transform: scale(.95);
+}
+.loginText {
   color: #fff;
   text-decoration: none;
-}
-.loginBlock:hover {
-  transform: scale(1.1);
 }
 .siteName {
   display: flex;
   align-items: center;
   font-family: "Jacquard 24", system-ui;
+}
+.login_btn {
+  font-family: "Jacquard 24", system-ui;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login_btn:hover {
+  font-size: 21px;
 }

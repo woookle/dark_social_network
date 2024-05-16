@@ -1,0 +1,44 @@
+.form_block, .login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login {
+  font-size: 40px;
+}
+.input_block, .input_block_password {
+  padding: 5px 10px;
+  color: black;
+}
+.input_block_password {
+  margin-top: 5px;
+}
+.login_btn {
+  display: inline-block;
+  color: black;
+  border: 2px solid black;
+  width: 100%;
+  font-weight: 700;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+.login_btn:hover {
+  transform: scale(0.95);
+}
+.remember_me {
+  margin: 10px 0
+}
+.remember_text {
+  cursor: pointer;
+  user-select: none;
+}
+.remember_me, .login_btn {
+  cursor: pointer;
+}
+.error_message {
+  margin: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: brown;
+}

@@ -5,22 +5,31 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
-  if(!props.profile) {
-    return <Preloader />
+  if (!props.profile) {
+    return <Preloader />;
   }
   return (
     <div>
-      <div className={style.div}>
-        <img src="https://i.pinimg.com/originals/7c/11/de/7c11dea46b3b915460e750a9f43e7498.jpg" />
-      </div>
+      <div className={style.div}></div>
       <div className={style.descriptionBlock}>
-        <img className={style.avatar} src={props.profile.photos.small != null ? props.profile.photos.small : defaultAvatar} />
+        <img
+          className={style.avatar}
+          src={
+            props.profile.photos.small != null
+              ? props.profile.photos.small
+              : defaultAvatar
+          }
+        />
         <div>
           <p className={style.fullName}>{props.profile.fullName}</p>
           <p className={style.aboutMe}>{props.profile.aboutMe}</p>
-          <ProfileStatus className={style.aboutMe} status={props.status} updateStatus={props.updateStatus}  />
+          <ProfileStatus
+            className={style.aboutMe}
+            status={props.status}
+            updateStatus={props.updateStatus}
+          />
         </div>
-        </div>
+      </div>
     </div>
   );
 };

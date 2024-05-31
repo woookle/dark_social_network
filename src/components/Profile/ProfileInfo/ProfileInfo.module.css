@@ -1,7 +1,9 @@
-.div img {
+.div {
     width: 100%;
     height: 200px;
-    filter: contrast(300%) grayscale();
+    background: url(../../../assets/images/profileInfoImage.png)no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .descriptionBlock {
     padding: 10px;

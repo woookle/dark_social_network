@@ -7,7 +7,7 @@ const Post = (props) => {
 
       <div className={style.item}>
         <div className={style.post_info}>
-          <img src={defaultAvatar} alt="avatar" />
+          <img src={props.photo ? props.photo : defaultAvatar} alt="avatar" />
           {props.message}
         </div>
         <div className={style.total_likes}>

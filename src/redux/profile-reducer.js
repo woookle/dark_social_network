@@ -78,5 +78,13 @@ export const updateStatus = (status) => async (dispatch) => {
     dispatch(setStatus(status));
   }
 };
+export const setStats = (newStats) => async (dispatch) => {
+  const response = await profileAPI.editStats(newStats)
+  if(response.data.resultCode === 0) {
+    console.log('THERE IS FINISHED!')
+  } else {
+    console.log('SOMEBODY ERROR')
+  }
+}
 
 export default profileReducer;

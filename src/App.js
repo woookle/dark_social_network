@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Preloader from "./components/common/Preloader/Preloader";
+import EditProfileForm from "./components/EditProfileForm/EditProfileForm";
 
 const DialogsContainer = React.lazy(() =>
   import("./components/Dialogs/DialogsContainer")
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/music" element={<Music />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/edit_profile" element={<EditProfileForm />} />
           </Routes>
         </React.Suspense>
       </div>

@@ -4,10 +4,9 @@ import style from './Post.module.css';
 
 const Post = (props) => {
     return (
-
       <div className={style.item}>
         <div className={style.post_info}>
-          <img src={props.photo ? props.photo : defaultAvatar} alt="avatar" />
+          <img src={props.photo != null ? props.photo : defaultAvatar} alt="avatar" />
           {props.message}
         </div>
         <div className={style.total_likes}>
